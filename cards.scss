@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: sans-serif;
+  --card-border-radius: 10px;
+  --xl-card-width: 500px;
+  --xl-card-height: 350px;
+  --lg-card-width: 700px;
+  --lg-card-height: 400px;
+  --md-card-width: 650px;
+  --md-card-height: 325px;
+  --sm-card-width: 450px;
+  --sm-card-height: 280px; 
+  --xs-card-width: 370px;
+  --xs-card-height: 250px;
+  --card-gap: 1rem;
+}
+
+
+.course-info {
+  background-image: url('images/office-desk-with-laptop.jpg');
+  background-size: cover;
+  font-family: var(--font-family);
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: linear-gradient(
+      to right,
+      rgba(61, 90, 254, 0.8),
+      rgba(134, 185, 255, 0.7)
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    border-radius: var(--card-border-radius);
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: transparent;
+      width: 10rem;
+      border: 2px solid white;
+      padding: 10px 20px;
+      color: white;
+      text-transform: uppercase;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &:hover {
+        background: rgba(255,255,255,0.2);
+      }
+    }
+  }
+}
+
+#business-card-1 {
+  background-color: white;
+  box-shadow: 0 0 30px 3px lightgrey;
+
+  .title {
+    color: grey;
+    font-weight: lighter;
+  }
+  .company {
+    color: rgba(39, 41, 245, 0.8);
+    font-weight: bold;
+  }
+
+  .star-color {
+    color: orange;
+  }
+}
+
+#business-card-2 {
+  background: linear-gradient(
+    to right,
+    rgba(61, 90, 254, 0.8),
+    rgba(134, 185, 255, 0.7)
+  );
+
+  color: white;
+
+  .title {
+    font-weight: lighter;
+  }
+
+  .company {
+    font-weight: bold;
+  }
+}
+
+.business-card {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+
+  &__upper-part {
+    display: flex;
+
+    .left-header {
+      flex-grow: 1;
+      display: flex;
+
+      img {
+        object-fit: cover;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+      }
+
+      .name-title {
+        margin-left: 10px;
+
+        .name {
+          display: inline-block;
+          font-size: 1.5rem;
+          margin:10px 0 15px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    width: var(--xs-card-width);
+    height: calc(var(--xs-card-height) * 3 + 20px);
+    gap:var(--card-gap);
+
+    .card {
+      width: var(--xs-card-width);
+      height: var(--xs-card-height);
+      border-radius: var(--card-border-radius);
+      position: relative;
+
+      p {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:600px) {
+  html {
+    font-size: 18px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    width: var(--sm-card-width);
+    height: calc(var(--sm-card-height) * 3 + 20px);
+    gap:var(--card-gap);
+
+    .card {
+      width: var(--sm-card-width);
+      height: var(--sm-card-height);
+      border-radius: var(--card-border-radius);
+      position: relative;
+
+      p {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:768px) {
+  html {
+    font-size: 24px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    width: var(--md-card-width);
+    height: calc(var(--md-card-height) * 3 + 20px);
+    gap:var(--card-gap);
+
+    .card {
+      width: var(--md-card-width);
+      height: var(--md-card-height);
+      border-radius: var(--card-border-radius);
+      position: relative;
+
+      p {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    width: var(--lg-card-width);
+    height: calc(var(--lg-card-height) * 3 + 20px);
+    gap:var(--card-gap);
+
+    .card {
+      width: var(--lg-card-width);
+      height: var(--lg-card-height);
+      border-radius: var(--card-border-radius);
+      position: relative;
+
+      p {
+        font-weight: lighter;
+        font-size: 1rem;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  html {
+    font-size: 16px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    width: calc(var(--xl-card-width) * 2 + 10px);
+    height: calc(var(--xl-card-height) * 2 + 10px);
+    gap:10px;
+
+    .card {
+      width: var(--xl-card-width);
+      height: var(--xl-card-height);
+      border-radius: var(--card-border-radius);
+      position: relative;
+    }
+  }
+}
+
